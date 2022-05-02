@@ -1,0 +1,40 @@
+{
+  "name": "@pepeeja/eslint-config",
+  "version": "0.0.2",
+  "private": false,
+  "main": "index.js",
+  "author": "Vladislav Shukelait",
+  "keywords": [
+    "eslint",
+    "prettier"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "release": "npm publish --tag next",
+    "test": "npm run test:node || npm run test:react",
+    "test:react": "eslint test/test.tsx -c react.js",
+    "test:node": "eslint test/test.ts -c node.js"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "5.9.1",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.4.0",
+    "prettier": "2.6.2"
+  },
+  "devDependencies": {
+    "typescript": "4.5.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  }
+}
